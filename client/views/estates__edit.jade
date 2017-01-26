@@ -1,0 +1,44 @@
+template(name="EstatesEdit")
+  .container
+    form(role="form")
+      .panel.panel-default
+        .panel-heading
+          h2 Редактирование объекта
+            small(style = 'float:right')
+              .form-group
+                .submit-div
+                  button.form-submit-button.btn.btn-success(type="submit") 
+                    i.fa.fa-save
+                  button.form-cancel-button.btn.btn-danger
+                    i.fa.fa-remove
+        .panel-body            
+          +if errorMessage
+            .alert.alert-warning {{errorMessage}}
+          +if infoMessage
+            .alert.alert-success {{infoMessage}}
+          
+          .form-group.field-name.input-group
+            .input-group-addon.input-group-addon-col(style='min-width: 100px;text-align: right;') Заголовок
+            .input-div
+              input.form-control(type="text" name="title" value="{{estate.title}}" autofocus="autofocus" required="required" data-type="string")
+
+          .form-group.field-description.input-group
+            .input-group-addon.input-group-addon-col(style='min-width: 100px;text-align: right;') Описание
+            .input-div
+              textarea.form-control(name="description" required="required" style='resize: vertical; height:35px') {{estate.description}}
+
+          .form-group.field-description.input-group
+            .input-group-addon.input-group-addon-col(style='min-width: 100px;text-align: right;') Адрес
+            .input-div
+              textarea.form-control(name="adress" required="required" style='resize: vertical; height:35px') {{estate.adress}}
+
+
+          .form-group.field-name.input-group
+            .input-group-addon.input-group-addon-col(style='min-width: 100px;text-align: right;') Стоимость
+            .input-div
+              input.form-control(type="text" name="price" value="{{estate.price}}" autofocus="autofocus" required="required" data-type="string")
+
+          .form-group.field-description.input-group
+            .input-group-addon.input-group-addon-col(style='min-width: 150px;text-align: right;') Ссылки на изображения
+            .input-div
+              textarea.form-control(name="photos" required="required" style='resize: vertical; height:120px; overflow:auto') {{estate.photos}}

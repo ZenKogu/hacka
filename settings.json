@@ -1,0 +1,8 @@
+{
+  "galaxy.meteor.com": { 
+     "env": { 
+       "MONGO_URL": "mongodb://zenkogu:ndtrmnmt330@ds055584.mlab.com:55584/appdb" 
+     } 
+   }
+}
+
