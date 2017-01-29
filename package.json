@@ -1,5 +1,5 @@
 {
-  "name": "V.0004",
+  "name": "hackathon",
   "private": true,
   "scripts": {
     "start": "meteor run"

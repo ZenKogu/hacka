@@ -1,15 +1,25 @@
 
 DBController Meteor.roles, \hard, \roles
 DBController Meteor.users, \hard, \users
-DBController Estates,   \easy, \estates
+DBController Comrades,      \easy, \comrades 
+DBController Unions,       \easy, \unions
 
 Meteor.publish \users_roles, -> Meteor.users.find {}, fields:\roles : 1
 Meteor.publish \images, -> Images.find!
 Meteor.publish \users,  -> Meteor.users.find! # {}, fields:{'roles':1,'name':1,'email':1}
 Meteor.publish \roles,  -> Meteor.roles.find!
-Meteor.publish \estates,  -> Estates.find!
-Meteor.publish \estate,  -> Estates.findOne _id:it
-Meteor.publish \estate_empty,  -> Estates.findOne _id:null
+
+
+Meteor.publish \comrades,       -> Comrades.find!
+Meteor.publish \comrade,        -> Comrades.findOne _id:it
+Meteor.publish \comrade_empty,  -> Comrades.findOne _id:null
+
+Meteor.publish \unions,        -> Unions.find!
+Meteor.publish \union,         -> Unions.findOne _id:it
+Meteor.publish \union_empty,   -> Unions.findOne _id:null
+
+
+
 
 Images.allow do
 	insert:   -> true

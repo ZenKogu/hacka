@@ -22,7 +22,7 @@ twbs:bootstrap
 reactive-dict@1.1.8
 
 alanning:roles
-dessix:livescript-compiler
+zenkogu:livescript-compiler
 
 cfs:standard-packages
 cfs:filesystem
