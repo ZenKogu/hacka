@@ -1,3 +1,4 @@
+
 .FileCell-link{
 	color: #3571e4;
 	font-family: OpenSans;
@@ -797,4 +798,14 @@ body{padding-top:30px;}
 
 .list-group-item:hover{
 	background-color:rgb(250,250,240);
+}
+
+
+
+div.input-group-addon{
+    height: 32px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    border-bottom-width: 0px;
+    border-top-width: 0px;
 }

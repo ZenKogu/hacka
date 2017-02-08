@@ -1,4 +1,3 @@
-
 @fs = Npm.require 'fs'
 @path = Npm.require 'path'
 
@@ -20,14 +19,12 @@
 				update: -> true
 				remove: -> true					 
 	DB.before.insert (userId, doc, AllId=[0])~>
-		_.each DB.find!fetch!, (obj)-> AllId.push +obj._id
+		[ AllId.push +obj._id 	for obj in DB.find!fetch! ]
 		doc._id = String <| +_.max(AllId) + 1 
 		doc.createdAt = new Date
-		doc.userId = userId
-		for i of specFields
-			doc[i] = specFields[i]
+		doc.createdBy = userId
+		[ doc.i = specFields.i 	for i of specFields ]
 
-	# 	Rec event:\database operation:\insert, dbName:admSection, document:doc._id
 
-	# DB.before.update (uId, doc)-> Rec event:\database, operation:\update, dbName:admSection, document:doc._id
-	# DB.before.remove (uId, doc)-> Rec event:\database, operation:\remove, dbName:admSection, document:doc._id
+
+

@@ -10,25 +10,18 @@ Meteor.methods do
 
 
 	'createUserAccount': (options) ->
-		userOptions = {}
-		if options.username
-			userOptions.username = options.username
-		if options.email
-			userOptions.email = options.email
-		if options.password
-			userOptions.password = options.password
-		if options.roles
-			userOptions.roles = options.roles
+		userOptions={}
+		userOptions{email,password,username,roles} = options
 		AllId=[]
 		for usr in Meteor.users.find!fetch!
 			AllId.push +usr._id
 		id = String <| +_.max(AllId) + 1 
 
 
-		newUser = Accounts.createUser userOptions
+		newUser = Accounts.createUser options
 
 		# Meteor.users.update {_id:\1}, {$set:{roles:[\1]}}
-		Meteor.users.update {_id: id}, {$set: roles: userOptions.roles}
+		Meteor.users.update {_id: id}, {$set: roles: options.roles}
 
 
 	'updateUserAccount': (userId, options) ->
@@ -110,9 +103,7 @@ Meteor.methods do
 		#   Accounts.setPassword userId, password
 		# return
 
-	'logoutAndMain':->
-		Rec event: 'logout'
-		App.logout();  Router.go '/main' 
+	'logoutAndMain':-> App.logout();  Router.go '/' 
 
 	'RolesAccess': (rolesArray)->
 		out = false
@@ -123,12 +114,12 @@ Meteor.methods do
 		out
 
 
-UserStatus.events.on("connectionLogin", (fields)-> Rec event: 'login')
+# UserStatus.events.on("connectionLogin", (fields)-> Rec event: 'login')
 # fields contains userId, connectionId, ipAddr, userAgent, and loginTime.
 
 # UserStatus.events.on("connectionLogout", (fields)-> )
 # fields contains userId, connectionId, lastActivity, and logoutTime.
 
-UserStatus.events.on("connectionIdle", (fields)-> Rec event: 'idle', lastActivity: fields.lastActivity)
+# UserStatus.events.on("connectionIdle", (fields)-> Rec event: 'idle', lastActivity: fields.lastActivity)
 # fields contains userId, connectionId, and lastActivity.
 
