@@ -1,6 +1,6 @@
 template \unions -> D \container,
-	div class:\page-header style:'padding-top:0px; margin-top:0px',		
-		div class:'input-group' style:\width:100%, 						
+	div class:\page-header style:'padding-top:0px; margin-top:0px',
+		div class:'input-group' style:\width:100%,
 			div class:\input-group-addon, h4 'Союзы ' small 'критерии поиска: '
 			input id:\dataview-search-input class:\form-control placeholder:'Введите запрос'
 	div	class:\list-group style:'width:100%; padding:0px; margin:0px;',
@@ -9,9 +9,9 @@ template \unions -> D \container,
 		Blaze.Each (~> SL(@,\tableItems)), ~> do
 			union_view {name:SL(@,\name); src:SL(@,\src); text:SL(@,\text); tags:SL(@,\tags); lvl:SL(@,\lvl); members:SL(@,\members); _id:SL(@,\_id)}
 
-union_view = (o)->a href:"unions/profile/#{o._id}" class:\list-group-item style:'width:100%; min-height:200px;' , 
+union_view = (o)->a href:"unions/profile/#{o._id}" class:\list-group-item style:'width:100%; min-height:200px;' ,
 	div style:"width:20%; float:right; vertical-align:center; height:180px; max-height:180px;  background-image:url(#{o.src}); background-repeat:no-repeat; background-position:center center; background-size: 180px auto"
-	h4 o.name,  
+	h4 o.name,
 		for lbl in (split \, o.tags)
 			span style:'margin-left:4px' class:'label label-success', lbl
 	p style:'padding-top:5px; min-height:55px', o.text
@@ -26,7 +26,7 @@ union_member = (o={src:'',name:'Анонимус', role:'Участник'})-> D
 		div o.role
 
 
-Template.unions.rendered = ->	
+Template.unions.rendered = ->
 	pageSession.set \SearchString ''
 	pageSession.set \InfoMessage ''
 	pageSession.set \ErrorMessage ''
@@ -34,8 +34,8 @@ Template.unions.rendered = ->
 Template.unions.events do
 	'keydown #dataview-search-input':->
 		if event.which == 13
-			event.preventDefault!	
-			pageSession.set \SearchString $(event.target).val!		
+			event.preventDefault!
+			pageSession.set \SearchString $(event.target).val!
 		if event.which == 27
 			event.preventDefault!
 			$(event.target).val ''
@@ -55,22 +55,22 @@ template \unionsEdit    -> union_page type:\edit
 template \unionsInsert  -> union_page type:\insert
 
 union_events =(o)->
-	'click .save':-> 
+	'click .save':->
 		pageSession.set \InfoMessage ''
 		pageSession.set \ErrorMessage ''
-		values = {}		
+		values = {}
 		[ values[$(val).attr(\name)] = $(val).text! for val in $(\.input-div) ]
 		if o.type == \edit => Unions.update {_id:currentID!}, {$set:values}, (err)->
-			if err => pageSession.set \ErrorMessage message 
-			else      
+			if err => pageSession.set \ErrorMessage message
+			else
 				pageSession.set \InfoMessage 'Изменения сохранены.'
 				Router.go \/unions/profile/ + currentID!
 
 		if o.type == \insert => Unions.insert values, (err)->
 				if err => pageSession.set \ErrorMessage err
 				else      Router.go \unions
-			
-	'click .exit':-> 
+
+	'click .exit':->
 		unless $(\.alert-success).length => bootbox.dialog do
 				message: 'Удалить все изменения?'
 				title: 'Удалить изменения и выйти'
@@ -85,14 +85,14 @@ union_events =(o)->
 						className: 'btn-default'
 		else Router.go \unions
 
-	'click .input-div':->  
+	'click .input-div':->
 		$(\.alert-dismissible).fadeOut(1000, -> $(@).remove!)
 
 Template.unionsProfile.events = union_events type:\profile
 Template.unionsEdit.events    = union_events type:\edit
 Template.unionsInsert.events  = union_events type:\insert
 
-union_page =(o)-> 
+union_page =(o)->
 	U =-> Unions.findOne(_id:currentID!)
 
 	page = switch o.type
@@ -100,11 +100,11 @@ union_page =(o)->
 		| \edit    => title:U!?name||\Несуществующее; small_title:'редактирование' edit:true
 		| \insert  => title:'Новый союз';             small_title:'создание'       edit:true
 
-	D \container, 
-		D \page-header, 
-			h2 page.title, 
+	D \container,
+		D \page-header,
+			h2 page.title,
 				small style:'padding-left:10px', page.small_title,
-				edit_buttons! if page.edit 
+				edit_buttons! if page.edit
 				link_edit_button! if (U!?createdBy == Meteor.userId! or Meteor.userId! == \1) and (o.type==\profile)
 
 		text_input {addon_text:\Название        name:\name    editable:page.edit, type:\text, value:U!?name}
@@ -113,33 +113,33 @@ union_page =(o)->
 		text_input {addon_text:\Участники       name:\members editable:page.edit, type:\text, value:''}
 		text_input {addon_text:'Ссылка на лого' name:\src     editable:page.edit, type:\text, value:U!?src}
 		error_message that if pageSession.get \ErrorMessage
-		info_message  that if pageSession.get \InfoMessage 
+		info_message  that if pageSession.get \InfoMessage
 
 
-text_input =(o)-> 
+text_input =(o)->
 	D 'input-group input-group-section form-group',
 		D \input-group-addon, o.addon_text
 		div class:\input_element,
 			div {class:'input-div form-control text-input', name:o.name, contenteditable:o.editable, type:o.type}, o.value
 
-edit_buttons =-> 
+edit_buttons =->
 	div class:\btn-group style:'float:right',
 		a class:'btn btn-success save', i class:'fa fa-save'
 		a class:'btn btn-primary exit',  i class:'fa fa-remove'
 
-link_edit_button =-> 
+link_edit_button =->
 	div class:\btn-group style:'float:right',
 		a class:'btn btn-success save' href:"/unions/edit/#{currentID!}", i class:'fa fa-edit'
 
 
-error_message =-> 
+error_message =->
 	div class:'alert alert-danger alert-dismissible' role:\alert,
 		button class:\close \data-dismiss :\alert, i class:'fa fa-close'
 		strong 'Error. '
 		it
 
-info_message =-> 
+info_message =->
 	div class:'alert alert-success alert-dismissible' role:\alert,
 		button class:\close \data-dismiss :\alert, i class:'fa fa-close'
 		strong 'Готово. '
-		it		
+		it
