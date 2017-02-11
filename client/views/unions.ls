@@ -154,13 +154,18 @@ union_profile_page =-> div class:\container style:'padding-left:10px; padding-ri
 union_timeline =->
 	div style:'position:fixed; right:10px; height:100%; width:145px; overflow-y:scroll;',
 		div style:'float:center',
-			div class:'alert-info' style:'background-color:white', i class:'fa fa-circle-thin' style:'font-size:120px'
-			div class:'alert-info' style:'background-color:white', i class:'fa fa-circle-thin' style:'font-size:120px'
-			div class:'alert-info' style:'background-color:white', i class:'fa fa-circle-thin' style:'font-size:120px'
-			div class:'alert-info' style:'background-color:white', i class:'fa fa-circle-thin' style:'font-size:120px'
-			div class:'alert-info' style:'background-color:white', i class:'fa fa-circle-thin' style:'font-size:120px'
-			div class:'alert-info' style:'background-color:white', i class:'fa fa-circle-thin' style:'font-size:120px'
-
+			div class:'alert-info' style:'background-color:white; font-size:120px', 'A'
+			div class:'alert-info' style:'background-color:white; font-size:120px', 'B'
+			div class:'alert-info' style:'background-color:white; font-size:120px', 'C'
+			div class:'alert-info' style:'background-color:white; font-size:120px', 'D'
+			div class:'alert-info' style:'background-color:white; font-size:120px', 'E'
+			div class:'alert-info' style:'background-color:white; font-size:120px', 'F'
+			div class:'alert-info' style:'background-color:white; font-size:120px', 'G'
+			div class:'alert-info' style:'background-color:white; font-size:120px', 'H'
+			div class:'alert-info' style:'background-color:white; font-size:120px', 'I'
+			div class:'alert-info' style:'background-color:white; font-size:120px', 'J'
+			div class:'alert-info' style:'background-color:white; font-size:120px', 'K'
+			div class:'alert-info' style:'background-color:white; font-size:120px', 'L'
 
 
 union_member_big = (o={src:'https://pp.vk.me/c305707/v305707222/4949/qJXr5hxBLoM.jpg',name:'Анонимус', role:'Участник'})->
@@ -169,7 +174,7 @@ union_member_big = (o={src:'https://pp.vk.me/c305707/v305707222/4949/qJXr5hxBLoM
 			img style:' border-radius:50%; height:180px;' src:'https://pp.vk.me/c305707/v305707222/4949/qJXr5hxBLoM.jpg'
 			div class:\caption,
 				h4 class:\media-heading, 'Media heading'
-				'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.',
+				replicate 40 'Cras sit amet nibh libero, in gravida nulla.'
 
 union_member_lil = (o={src:'https://pp.vk.me/c305707/v305707222/4949/qJXr5hxBLoM.jpg',name:'Анонимус', role:'Участник'})->
 	div style:'display:inline-block; white-space:pre-wrap; margin:5px; width:50px;',
@@ -189,7 +194,8 @@ union_description =-> div class:\union_description,
 				span style:'margin:5px' class:'label label-info', '120'
 
 		div style:'height:300px; display:inline-block; margin-top:10px',
-			div class:'union_short_description' style:'width:48%; max-height:300px; display:inline-block; overflow-y:scroll; margin-right:15px; font-size:18px; padding-left:10px;', 'Вы не спите ночами, мечтаете о стартапе и думаете, а не создать ли мне нечто такое, что перевернет интернет бизнес и сделает вас миллионерами. Вы не одиноки, вот какие мысли могли прийти в голову создателям этих весьма успешных компаний. Они кажутся совершенно провальными бизнес идеями, но они принесли своим создателям миллионы долларов и даже миллиарды долларов. Сделаю ка я аналог соцсетей MySpace и Friendster, ничего, что они популярны и существуют уже несколько лет. Начну со студентов Гарварда, позже еще миллиард пользователей придет в мою соцсеть. Вы не спите ночами, мечтаете о стартапе и думаете, а не создать ли мне нечто такое, что перевернет интернет бизнес и сделает вас миллионерами. Вы не одиноки, вот какие мысли могли прийти в голову создателям этих весьма успешных компаний. Они кажутся совершенно провальными бизнес идеями, но они принесли своим создателям миллионы долларов и даже миллиарды долларов. Сделаю ка я аналог соцсетей MySpace и Friendster, ничего, что они популярны и существуют уже несколько лет. Начну со студентов Гарварда, позже еще миллиард пользователей придет в мою соцсеть.'
+			div class:'union_short_description' style:'width:48%; max-height:300px; display:inline-block; overflow-y:scroll; margin-right:15px; font-size:18px; padding-left:10px;',
+				replicate 40 'Вы не спите ночами, мечтаете о стартапе и думаете, а не создать ли мне нечто такое, что перевернет интернет бизнес и сделает вас миллионерами. '
 			div class:'union_logo' style:'width:49%; padding-top:15px; padding-left:20px; height:300px; display:inline-block; min-height:100px; background-image:url(http://www.laser-bulat.ru/upload/iblock/0c5/0c5635909ae250028d20d853befa5492.jpg); background-size:cover'
 
 union_team =-> div class:\union_team style:'margin-top:30px',
@@ -202,66 +208,8 @@ union_team =-> div class:\union_team style:'margin-top:30px',
 			'Вакансии'
 			span style:'margin:5px' class:'label label-info', '14'
 	div  style:'overflow-x:scroll; margin-top:20px',
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
-		union_member_lil!
+		replicate 75 union_member_lil!
+
 union_news_list =-> div class:\union_news style:'margin-top:30px',
 		div class:\header,
 			h2 class:'union_header_text' style:'font-size:30px',
@@ -269,14 +217,8 @@ union_news_list =-> div class:\union_news style:'margin-top:30px',
 				span style:'margin:5px' class:'label label-primary', '184'
 
 		div  style:'white-space:nowrap; overflow-x:scroll; margin-top:20px',
-			union_news!
-			union_news!
-			union_news!
-			union_news!
-			union_news!
-			union_news!
-			union_news!
-			union_news!
+			replicate 10 union_news!
+
 
 union_news=-> div style:'display:inline-block; white-space:pre-wrap; margin:5px; width:32.5%',
 	div class:\thumbnail,
@@ -298,32 +240,27 @@ union_finance =-> 	div class:\union_finance style:'margin-top:30px; margin-botto
 				th 'Статья расходов'
 				th 'Потрачено'
 				th 'Комментарий'
-			tbody do
-				tr(td('Свистелки'), td('100 рублей'), td('Для Винни'))
-				tr(td('Опилки'), td('200 рублей'), td('Для Винни'))
-				tr(td('Неправильный мёд'), td('600 рублей'), td('Для Ослика'))
-				tr(td('Ружьё'), td('2000 рублей'), td('Для Свиньи'))
-				tr(td('Свистелки'), td('100 рублей'), td('Для Винни'))
-				tr(td('Опилки'), td('200 рублей'), td('Для Винни'))
-				tr(td('Неправильный мёд'), td('600 рублей'), td('Для Ослика'))
-				tr(td('Ружьё'), td('2000 рублей'), td('Для Свиньи'))
-				tr(td('Свистелки'), td('100 рублей'), td('Для Винни'))
-				tr(td('Опилки'), td('200 рублей'), td('Для Винни'))
-				tr(td('Неправильный мёд'), td('600 рублей'), td('Для Ослика'))
-				tr(td('Ружьё'), td('2000 рублей'), td('Для Свиньи'))
-				tr(td('Свистелки'), td('100 рублей'), td('Для Винни'))
-				tr(td('Опилки'), td('200 рублей'), td('Для Винни'))
-				tr(td('Неправильный мёд'), td('600 рублей'), td('Для Ослика'))
-				tr(td('Ружьё'), td('2000 рублей'), td('Для Свиньи'))
-				tr(td('Свистелки'), td('100 рублей'), td('Для Винни'))
-				tr(td('Опилки'), td('200 рублей'), td('Для Винни'))
-				tr(td('Неправильный мёд'), td('600 рублей'), td('Для Ослика'))
-				tr(td('Ружьё'), td('2000 рублей'), td('Для Свиньи'))
+			replicate 15 tbody do
 				tr(td('Свистелки'), td('100 рублей'), td('Для Винни'))
 				tr(td('Опилки'), td('200 рублей'), td('Для Винни'))
 				tr(td('Неправильный мёд'), td('600 рублей'), td('Для Ослика'))
 				tr(td('Ружьё'), td('2000 рублей'), td('Для Свиньи'))
 
 
-union_analitics =-> 	div class:\union_analitics
-union_custom =-> 		div class:\union_custom
+
+union_analitics =-> 	div class:\union_analitics style:'margin-top:30px; margin-bottom:30px',
+		div class:\header,
+			h2 class:'union_header_text' style:'font-size:30px',
+				'Аналитика'
+				span style:'margin:5px' class:'label label-primary', 'Суперуспешно'
+		div style:'margin-top:30px; height:600px; overflow:scroll; background-image:url(http://www.zerkalo.lv/wp-content/uploads/2014/05/vinni_puh_citati.jpg); background-size:cover'
+
+
+union_custom =-> div class:\union_custom
+
+# 1. Каким будет таймлайн?
+# 2. Какой будет аналитика?
+# 3. Таблица расходов — как это сделать? Как будут вносить данные по расходам, насколько подробно?
+# 4. С описанием как будем? Сколько ифномрации там будет содержаться?
+# 5. Кастомные блоки — что там будет? Нужны какие-то варианты. Как это вообще будет?
+# 6. Этапы как будут фиксироваться? Нужно для каждого раздела продумать не толькол то, как он будет выглядеть, но и интерфейс редактирования/добавления записи. Что-то может автоматически генерироваться, что-то нужно будет загружать в виде файлов (например, таблица с расходами в json формате). Какие-то данные вводить вручную.
