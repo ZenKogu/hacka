@@ -24,9 +24,9 @@
 }
 
 .FileCell-exten{
-	color: #979696; 
-	font-family: OpenSans; 
-	font-size: 12px; 
+	color: #979696;
+	font-family: OpenSans;
+	font-size: 12px;
 	font-weight: 400;
 }
 
@@ -53,11 +53,11 @@
 
 
 .MultiPicCell-image-text{
-	width: 100%; 
-	height: 50px; 
-	opacity: 0.73; 
-	z-index:2; 
-	position:absolute; 
+	width: 100%;
+	height: 50px;
+	opacity: 0.73;
+	z-index:2;
+	position:absolute;
 	background-color:white;
 	padding-left: 5px;
 	top:100px;
@@ -133,9 +133,9 @@
 	color: #215cc9;
 	font-family: OpenSans;
 	font-size: 14px;
-	font-weight: 400; 
+	font-weight: 400;
 	position: absolute;
-	left:29px; 
+	left:29px;
 	top:5px;
 	background-color: rgb(233,232,232);
 }
@@ -179,7 +179,7 @@
 	width: 1px;
 	height: 100%;
 	top:0px;
-	bottom:0px;	
+	bottom:0px;
 	margin-left:319px;
 	background-color: rgb(218,217,217);
 	z-index: 2;
@@ -217,7 +217,7 @@
 	margin-left:316px;
 	top:0px;
 	bottom:0px;
-	z-index: 2;	
+	z-index: 2;
 	background-color: rgb(231,230,230);
 
 }
@@ -323,7 +323,7 @@
 .header-admin-materials{
 	padding: 0px;
 	margin-top: -7px;
-	margin-left: 10px;	
+	margin-left: 10px;
 }
 
 .checkbox-input{
@@ -335,18 +335,18 @@
 }
 
 .admin-section-container{
-	min-width:800px; 
-	padding:0px; 
-	margin-left:auto; 
+	min-width:800px;
+	padding:0px;
+	margin-left:auto;
 	margin-right:auto;
 }
 
 .input-group-section{
-	width:100%; 
-	position:relative; 
-	margin-right:10px; 
-	margin-top:5px; 
-	margin-bottom:5px; 
+	width:100%;
+	position:relative;
+	margin-right:10px;
+	margin-top:5px;
+	margin-bottom:5px;
 	padding:0px
 }
 
@@ -357,10 +357,10 @@
 
 .input-group-section .input-div{
 	min-height:50px;
-	height: 100%; 
-	overflow-y:visible; 
-	width:100%; 
-	position:relative; 
+	height: 100%;
+	overflow-y:visible;
+	width:100%;
+	position:relative;
 	float:left
 }
 
@@ -370,8 +370,8 @@
 
 
 .btn-xs{
-	border-radius:5px; 
-	float:right; 
+	border-radius:5px;
+	float:right;
 	margin-right:5px;
 }
 
@@ -382,10 +382,10 @@ select{
 
 
 .col-select{
-	width:300px; 
-	display:inline; 
-	height:25px; 
-	margin-left:20px; 
+	width:300px;
+	display:inline;
+	height:25px;
+	margin-left:20px;
 	font-weight:bold
 }
 
@@ -444,7 +444,7 @@ select{
 	margin-top: 5px;
 	margin-bottom: 10px;
 	margin-right: 5px;
-	
+
 	padding-top:2px;
 	padding-bottom:3px;
 	padding-left:5px;
@@ -464,7 +464,7 @@ background-color: rgb(217,83,79);
 
 .form-control-keywords{
 	/*position: absolute;*/
-	min-height: 60px; 
+	min-height: 60px;
 	height: 100%;
 	width: 100%;
 
@@ -477,10 +477,18 @@ background-color: rgb(217,83,79);
 	margin-top: 140px;
 }
 */
+.navbar-default{
+	background-color: rgba(255,255,255,0);
+	border-color: rgba(255,255,255,0);
+	color:black;
+	height:20px;
+	margin:0px;
+}
+
 
 .btn-neutral{
-	background-color:rgb(248,245,240); 
-	color:black; 
+	background-color:rgb(248,245,240);
+	color:black;
 	border-color:rgb(223,215,203);
 	border-style: solid;
 
@@ -489,7 +497,7 @@ background-color: rgb(217,83,79);
 .btn.btn-format{
 	font-weight: 100;
 
-	height:20px; 
+	height:20px;
 	/*padding-top:5px; */
 	text-align: center;
 	margin:0px;
@@ -499,7 +507,7 @@ background-color: rgb(217,83,79);
 
 .btn.l-format{
 	font-weight: 100;
-	height:20px; 
+	height:20px;
 	text-align: center;
 	margin:0px;
 	padding-top: 0px;
@@ -543,22 +551,22 @@ a{
 }
 
 .get-table-btn{
-	
+
 	/*margin-top:12px; */
 	/*margin-bottom:5px; */
-	margin-left:15px; 
+	margin-left:15px;
 /*	padding-top:5px; */
-	padding-bottom:5px; 
+	padding-bottom:5px;
 	display: inline;
 	text-align: center;
-	
+
 	height:30px;
 
 }
 
 
 .btn-tbl-txt{
-	position:relative; 
+	position:relative;
 	bottom:7px;
 
 }
@@ -581,22 +589,22 @@ a{
     top: 200px;
     display: flex;
     align-items: center;
-    justify-content: center; 
-    overflow: auto; 
- 
+    justify-content: center;
+    overflow: auto;
+
 }
 
 
 
 
 .header__text{
-	border-left:none; 
-	border-right:none; 
-	border-top:none; 
-	font-size:30px; 
-	padding-top:10px; 
-	padding-left:5px; 
-	padding-bottom:0px; 
+	border-left:none;
+	border-right:none;
+	border-top:none;
+	font-size:30px;
+	padding-top:10px;
+	padding-left:5px;
+	padding-bottom:0px;
 	height:45px;
 }
 
@@ -607,24 +615,24 @@ a{
 
 .btn-neutral.btn__header, .btn-neutral.btn__header:hover{
 	font-weight: 100;
-	height:20px; 
+	height:20px;
 	text-align: center;
 	margin:0px;
-	color:black; 
-	border:solid; 
-	margin-bottom:2px; 
-	border-width:1px; 
+	color:black;
+	border:solid;
+	margin-bottom:2px;
+	border-width:1px;
 	border-color:rgb(223,215,203);
 	padding-top: 0px;
 }
 
 .btn-default.btn__header{
 	font-weight: 100;
-	height:20px; 
+	height:20px;
 	text-align: center;
 	margin:0px;
-	margin-bottom:2px; 
-	border-width:1px; 
+	margin-bottom:2px;
+	border-width:1px;
 	padding-top: 0px;
 }
 
@@ -639,12 +647,12 @@ a{
 	background-color: #ffffff;
 	background-image: none;
 	border: 1px solid #dfd7ca;
-	
-	border-left:none; 
-	border-right:none; 
-	border-top:none; 
-	padding-top:10px; 
-	padding-left:5px; 
+
+	border-left:none;
+	border-right:none;
+	border-top:none;
+	padding-top:10px;
+	padding-left:5px;
 	padding-bottom:0px;
 }
 
@@ -653,7 +661,7 @@ a{
 
 .btn.get__link{
 	font-weight: 100;
-	height:20px; 
+	height:20px;
 	/*padding-top:5px; */
 	text-align: center;
 	margin:0px;
@@ -663,7 +671,7 @@ a{
 }
 .btn.get__link:hover{
 	font-weight: 100;
-	height:20px; 
+	height:20px;
 	/*padding-top:5px; */
 	text-align: center;
 	margin:0px;
@@ -674,25 +682,25 @@ a{
 
 
 select.text-select{
-	border-style:solid; 
-	border-color:rgb(236,236,236); 
-	border-width:1px; 
-	background-color:white; 
-	margin-right:5px; 
-	display:inline; 
-	height:20px; 
+	border-style:solid;
+	border-color:rgb(236,236,236);
+	border-width:1px;
+	background-color:white;
+	margin-right:5px;
+	display:inline;
+	height:20px;
 	width:200px
 }
 
 select.table-select{
-margin-left:24px; 
-border-style:solid; 
-border-color:rgb(236,236,236); 
-border-width:1px; 
-background-color:white; 
-display:inline; 
-height:31px; 
-min-width:160px; 
+margin-left:24px;
+border-style:solid;
+border-color:rgb(236,236,236);
+border-width:1px;
+background-color:white;
+display:inline;
+height:31px;
+min-width:160px;
 
 }
 select.collection-selector{
@@ -763,7 +771,7 @@ select.select__list__lib:focus {
 	margin: 0px;
 }
 
-body{padding-top:30px;}
+/*body{padding-top:25px;}*/
 
 
 /* On mouse-over, add a deeper shadow */
@@ -792,7 +800,7 @@ body{padding-top:30px;}
 }
 
 .input-group-addon-col{
-	
+
 }
 
 
