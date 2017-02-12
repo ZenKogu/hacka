@@ -1,10 +1,9 @@
 if not Meteor.users.find!fetch!?length
-	userData = 
+	userData =
 		username: 'Василий Админов'
 		email: \vasiliy@adminov.com
 		password: \ndtrmnmt330
 	newUser = Accounts.createUser userData
-
 	Meteor.users.update {_id:\1}, {$set:{roles:[\1]}}
 
 if not Meteor.roles.find!fetch!?length
