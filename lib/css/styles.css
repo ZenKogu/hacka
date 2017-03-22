@@ -817,3 +817,101 @@ div.input-group-addon{
     border-bottom-width: 0px;
     border-top-width: 0px;
 }
+
+
+.nav__background{
+background-color:#9A958E;
+position: relative;
+display: inline-block;
+height: 50px;
+width: 100%;
+padding-left: 5%;
+
+}
+
+.nav__menu__glue{
+	position: relative;
+	top:-40px;
+height: 50px;
+width: 100%;
+color: white;
+}
+
+
+.nav__item{
+color:white;
+font-weight: bold;
+display: inline-block;
+min-width: 50px;
+vertical-align:center;
+height:40px; 
+background-repeat:no-repeat; 
+background-position:center center; 
+background-size: 40px auto
+}
+
+.nav__vk{
+background-image: url("https://avatanplus.com/files/resources/mid/57d993e5eb5e515729e9ba4c.png");
+
+}
+.nav__fb{
+background-image: url("http://freevectorlogo.net/wp-content/uploads/2013/11/facebook-flat-vector-logo-400x400.png");
+
+}
+
+.nav__IN{
+	color:white;
+float:right;
+text-align: right;
+}
+
+.sq{
+	margin-bottom: 10px; 
+	background-color: white;
+	border-radius: 3px;
+	width: 100%;
+	min-height: 400px;
+	padding:5px;
+	border-width: 1px;
+	border-style: solid;
+	border-color:#DFDDDB;
+
+}
+
+body{
+	background-color: #EDEFF0;
+}
+
+.header__central{
+	font-size: 55px;
+	font-weight: bold;
+	text-align: center;
+	color:#5B5854;
+}
+
+.small__header__central{
+	position: relative;
+	top:-25px;
+	font-size: 25px;	
+	text-align: center;
+	color:#9A958E;
+}
+
+.smaller__header__central{
+	position: relative;
+	top:-25px;
+	font-size: 20px;	
+	text-align: center;
+	color:#9A958E;
+}
+
+
+
+.long__line{
+	background-color:#5B5854;
+	
+	height: 5px;
+	position: relative;
+}
+
+

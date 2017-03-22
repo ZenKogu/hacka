@@ -64,7 +64,6 @@ user_skills =-> div class:\user_skills style:'margin-top:30px',
 
 
 
-
 # ## Окно "люди".
 # #### Разные категории:
 # 1. Специалист
